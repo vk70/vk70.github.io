@@ -1,11 +1,48 @@
+
 body {
-    background-color: #191970;
+    background-image:url("bg.jpg"); 
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
 
 h1, h2, p, #countbox {
 	color: white;
 }
 
+h1 {
+	font-size: 6em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
 .center {
 	text-align:center;
 }
+
+.timanttipora {
+	font-size: 2em;
+	background-image:url("timanttiporantera50.png");
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 90px 0px;
+    margin: 20px 0px;
+}
+
+#countbox {
+	margin: 40px 0px;
+}
+
+.sub {
+	margin-top: 30px;
+    margin-bottom: 30px;
+}
+
