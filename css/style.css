@@ -23,12 +23,15 @@ h2 {
 	font-size: 2em;
 }
 
+.vuorimieskilta {
+    font-size: 4em;
+}
+
 .center {
 	text-align:center;
 }
 
 .timanttipora {
-	font-size: 2em;
 	background-image:url("timanttiporantera50.png");
     background-position:center;
     background-size: contain;
@@ -38,6 +41,7 @@ h2 {
 }
 
 #countbox {
+    font-size: 2em;
 	margin: 40px 0px;
 }
 
