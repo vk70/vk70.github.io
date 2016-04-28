@@ -5,25 +5,6 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-</head>
-<body>
-<div class="container">
-
-<h1 class="center">Oletko valmis?</h1>
-<!--<img src="timanttiporantera.png" height="200" width="200">-->
-<div class="logo col-xs-12 center timanttipora">
-<div id="countbox"></div>
-<h2 class="vuorimieskilta">Vuorimieskilta 70V</h2>
-</div>
-<div class="col-sm-6 sub center">
-<h2>Alustava ilmoittautuminen</h2>
-<p>Alustava ilmoittautuminen aukeaa myöhemmin syksyllä.</p>
-</div>
-<div class="col-sm-6 sub last center">
-<h2>Yhteistyökumppanit</h2>
-<p>Haluatko lähteä yhteistyöhön Vuorimieskilta 70 juhlavuonna 2017?<br/>Ota yhteyttä <a href="mailto:katri.ikaheimo@aalto.fi">katri.ikaheimo@aalto.fi</a></p>
-</div>
-</div>
 <script>
 dateFuture = new Date(2017,11,11,16,00,00);
 
@@ -57,10 +38,10 @@ dateFuture = new Date(2017,11,11,16,00,00);
 
                     secs=Math.floor(amount);//seconds
 
-                    if(days != 0){out += days +" päivää | "+((days!=1)?"":"")+"";}
-                    if(days != 0 || hours != 0){out += hours +" tuntia | "+((hours!=1)?"":"");}
-                    if(days != 0 || hours != 0 || mins != 0){out += mins +" minuuttia | "+((mins!=1)?"":"");}
-                    out += secs +" sekunttia";
+                    if(days != 0){out += days +"d "+((days!=1)?"":"")+"";}
+                    if(days != 0 || hours != 0){out += hours +"h "+((hours!=1)?"":"");}
+                    if(days != 0 || hours != 0 || mins != 0){out += mins +"min "+((mins!=1)?"":"");}
+                    out += secs +"s";
                     document.getElementById('countbox').innerHTML=out;
 
                     setTimeout("GetCount()", 1000);
@@ -71,5 +52,26 @@ dateFuture = new Date(2017,11,11,16,00,00);
 
     //-->
 </script>
+</head>
+<body>
+<div class="container">
+
+<h1 class="center">Oletko valmis?</h1>
+<div id="countbox" class="center"></div>
+<!--<img src="timanttiporantera.png" height="200" width="200">-->
+<div class="logo col-xs-12 center timanttipora">
+
+<h2 class="vuorimieskilta">Vuorimieskilta 70V</h2>
+</div>
+<div class="col-sm-6 sub center">
+<h2>Alustava ilmoittautuminen</h2>
+<p>Alustava ilmoittautuminen aukeaa myöhemmin syksyllä.</p>
+</div>
+<div class="col-sm-6 sub last center">
+<h2>Yhteistyökumppanit</h2>
+<p>Haluatko lähteä yhteistyöhön Vuorimieskilta 70 juhlavuonna 2017?<br/>Ota yhteyttä <a href="mailto:katri.ikaheimo@aalto.fi">katri.ikaheimo@aalto.fi</a></p>
+</div>
+</div>
+
 </body>
 </html>
