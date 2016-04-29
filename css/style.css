@@ -1,3 +1,19 @@
+@media all and (max-width: 360px) {
+   body {
+    font-size: 75%;
+  }
+}
+@media all and (min-width: 450px) {
+   body {
+    font-size: 150%;
+  }
+}
+@media all and (min-width: 600px) {
+   body {
+    font-size: 200%;
+  }
+}
+
 @font-face {
     font-family: SignPainter;
 
@@ -6,7 +22,6 @@
 
 body {
     font-family: "SignPainter";
-    font-size: 200%;
     background-image:url("bg.jpg"); 
     -webkit-background-size: cover;
     -moz-background-size: cover;
