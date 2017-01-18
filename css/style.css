@@ -1,76 +1,135 @@
 @media all and (max-width: 360px) {
    body {
-    font-size: 75%;
+    font-size: 175%;
   }
 }
-@media all and (min-width: 450px) {
+@media all and (min-width: 360px) {
    body {
     font-size: 150%;
   }
 }
-@media all and (min-width: 600px) {
-   body {
-    font-size: 200%;
-  }
-}
+
 
 @font-face {
-    font-family: SignPainter;
-
-    src: url("fonts/SignPainter.otf");
+  font-family: SignPainter;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/SignPainter.otf");
 }
 
 body {
-    font-family: "SignPainter";
-    background-image:url("bg.jpg"); 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #071854;
 }
 
-h1, h2, p, #countbox {
-	color: white;
+h1, h2 {
+  font-family: "SignPainter";
 }
 
 h1 {
-	font-size: 5em;
+  font-size: 5em;
 }
 
 h2 {
-	font-size: 2.4em;
+  font-size: 2.4em;
+  color: #071854;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: #071854;
 }
 
 p {
-    font-size: 1.2em;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+
 }
 
 .vuorimieskilta {
-    font-size: 4em;
+  font-size: 4em;
 }
 
 .center {
-	text-align:center;
-}
-
-.timanttipora {
-	background-image:url("timanttiporantera50.png");
-    background-position:center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 90px 0px;
-    margin: 20px 0px;
+  text-align:center;
 }
 
 #countbox {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .sub {
-	margin-top: 30px;
-    margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+body { padding-top: 35px; }
+
+li a {
+  font-size: 0.8em;
+}
+
+p, h2, h3 {
+  padding: 0px 20px;
+}
+
+.navbar-custom {
+  background-color: #071854;
+  border-color: #071854;
+  border: 0;
+}
+
+.row {
+  padding: 15px 0;
+}
+
+.bg-light {
+  background-color: #e2e2e2;
+}
+
+.bg-lighter {
+  background-color: #f4f4f4;
+}
+
+.navbar-custom .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar { min-height:38px;   }
+.navbar .navbar-brand{ padding: 0 12px;font-size: 16px;line-height: 38px;height: 38px; }
+.navbar .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 38px; }
+.navbar .navbar-toggle {  margin-top: 3px; margin-bottom: 0px; padding: 8px 9px; }
+.navbar .navbar-form { margin-top: 2px; margin-bottom: 0px }
+.navbar .navbar-collapse {border-color: #071854;}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover { background-color: #071854 }
+.navbar-toggle { border: 0 }
+.navbar-default .navbar-toggle .icon-bar { background-color: white; }
+
+.navbar-collapse {
+  text-align:center;
+}
+.navbar-nav {
+    display:inline-block;
+    float:none;
+}
+.pic {
+  padding: 0px;
+}
+
+.sponsor {
+  height: 50px;
+  width: auto;
+  padding: 0px 20px;
+}
