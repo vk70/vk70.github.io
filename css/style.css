@@ -52,17 +52,10 @@ p {
 
 }
 
-.vuorimieskilta {
-  font-size: 4em;
-}
-
 .center {
   text-align:center;
 }
 
-#countbox {
-  font-size: 2em;
-}
 
 .sub {
   margin-top: 30px;
@@ -75,10 +68,11 @@ p {
   height: auto;
 }
 
-body { padding-top: 35px; }
+body { padding-top: 37px; }
 
 li a {
-  font-size: 0.8em;
+  font-size: 1.5em;
+  font-family: "SignPainter";
 }
 
 p, h2, h3 {
@@ -91,8 +85,8 @@ p, h2, h3 {
   border: 0;
 }
 
-.row {
-  padding: 15px 0;
+.text-row {
+  padding: 0 0 20px 0;
 }
 
 .bg-light {
@@ -107,9 +101,10 @@ p, h2, h3 {
   color: white;
 }
 
-.navbar { min-height:38px;   }
-.navbar .navbar-brand{ padding: 0 12px;font-size: 16px;line-height: 38px;height: 38px; }
-.navbar .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 38px; }
+
+.navbar { min-height:20px; margin-bottom: 0px; }
+.navbar .navbar-brand{ padding: 0 12px;font-size: 16px;line-height: 20px;height: 20px; }
+.navbar .navbar-nav > li > a {  padding-top: 5px; padding-bottom: 0px; line-height: 27px; }
 .navbar .navbar-toggle {  margin-top: 3px; margin-bottom: 0px; padding: 8px 9px; }
 .navbar .navbar-form { margin-top: 2px; margin-bottom: 0px }
 .navbar .navbar-collapse {border-color: #071854;}
@@ -124,12 +119,21 @@ p, h2, h3 {
     display:inline-block;
     float:none;
 }
-.pic {
-  padding: 0px;
-}
 
 .sponsor {
-  height: 50px;
-  width: auto;
-  padding: 0px 20px;
+  height: 70px;
+
+}
+
+.sponsor-img {
+  max-height:100%;
+  max-width:100%;
+  margin: 0 20px;
+  padding-bottom: 20px;
+}
+
+.col-center-block {
+    float: none;
+    display: block;
+    margin: 0 auto;
 }

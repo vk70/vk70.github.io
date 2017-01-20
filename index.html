@@ -9,7 +9,7 @@
 <script src="scripts/jquery-3.1.1.min.js"></script>
 <script src="scripts/bootstrap.min.js"></script>
 <script>
-var shiftWindow = function() { scrollBy(0, -38) };
+var shiftWindow = function() { scrollBy(0, -37) };
 if (location.hash) shiftWindow();
 window.addEventListener("hashchange", shiftWindow);
 </script>
@@ -48,10 +48,10 @@ $(document).on('click','.navbar-collapse.in',function(e) {
                       <a class="page-scroll" id="link-paajuhla" href="#paajuhla">Pääjuhla</a>
                   </li>
                   <li>
-                      <a class="page-scroll" id="link-ilmoittautuminen" href="#ilmoittautuminen">Ilmoittautuminen</a>
+                      <a class="page-scroll" id="link-juhlavuoden-tapahtumat" href="#tapahtumat">Tapahtumat</a>
                   </li>
                   <li>
-                      <a class="page-scroll" id="link-juhlavuoden-tapahtumat" href="#tapahtumat">Juhlavuoden tapahtumat</a>
+                      <a class="page-scroll" id="link-vujukuntoon" href="#vujukuntoon">Vujukuntoon</a>
                   </li>
                   <li>
                       <a class="page-scroll" id="link-yhteistyo" href="#yhteistyo">Yhteistyökumppaniksi</a>
@@ -63,37 +63,53 @@ $(document).on('click','.navbar-collapse.in',function(e) {
       <!-- /.container-fluid -->
   </nav>
 <div class="container">
-<div class="row">
-<img class="logo center-block" src="VKkuva3.png"/>
-<div>
+  <div class="row">
+    <img class="logo center-block" src="VKkuva3.png"/>
+   <div>
 </div>
-<div class="container" id="vuorimieskilta70">
-  <div class="row bg-lighter">
+<div class="container" >
+  <div class="row bg-lighter text-row" id="vuorimieskilta70">
     <h2 >Vuorimieskilta 70</h2>
-    <p>Vuorimieskilta on vuonna 1947 perustettu Aalto-yliopiston Kemian tekniikan korkeakoulun materiaalitekniikan opiskelijoiden yhdistys. Vuorimieskilta viettää ensi vuonna 70-vuotisjuhlavuottaan. Koko vuosi tulee olemaan täynnä upeita Vuorimieshenkisiä tapahtumia, ekskursioita, julkaisuja sekä tervehenkistä liikuntaa. Juhlavuosi ei ole tarkoitettu ainoastaan opiskelijoille vaan myös vanhemmille vuorimiehille.</p>
+    <p>Vuorimieskilta on vuonna 1947 perustettu Aalto-yliopiston Kemian tekniikan korkeakoulun materiaalitekniikan opiskelijoiden yhdistys. Vuorimieskilta viettää tänä vuonna 70-vuotisjuhlavuottaan. Koko vuosi tulee olemaan täynnä upeita Vuorimieshenkisiä tapahtumia, ekskursioita, julkaisuja sekä tervehenkistä liikuntaa. Juhlavuosi ei ole tarkoitettu ainoastaan opiskelijoille vaan myös vanhemmille vuorimiehille.</p>
     <h3>Juhlavuodessa mukana</h3>
     <br/>
-    <img class="sponsor" src="Boliden.svg.png"/>
+    <div class="sponsor col-xs-6 col-sm-6 col-md-4">
+    <img class="sponsor-img col-center-block" src="Boliden.svg.png"/>
+    </div>
+    <div class="sponsor col-xs-6 col-sm-6 col-md-4">
+    <img class="sponsor-img col-center-block" src="Metallinjalostajat_Logo_RGB_Black_Fi.png"/>
+    </div>
+    <div class="sponsor col-xs-6 col-sm-6 col-md-4">
+    <img class="sponsor-img col-center-block" src="Pyhasalmi_Mine_logo_CMYK.jpg"/>
+    </div>
+    <div class="sponsor col-xs-6 col-sm-6 col-md-4">
+    <img class="sponsor-img col-center-block" src="SSAB_Logotype_blue_w1200px_RGB.png"/>
+    </div>
+
+    <div class="sponsor col-xs-6 col-sm-6 col-md-4">
+    <img class="sponsor-img col-center-block" src="Vuorimiesyhdistys.png"/>
+    </div>
+
+
     <br/>
   </div>
-
   <div class="row pic">
     <img class="logo center-block" src="vk-vujut.jpg"/>
   </div>
 
-  <div class="row bg-light" id="paajuhla">
+  <div class="row bg-light text-row" id="paajuhla">
     <h2>Pääjuhla</h2>
     <p>Koko juhlavuosi huipentuu pääjuhlaan, joka järjestetään 24.11.2017.</p>
-    <p>Pääjuhlan alustava ilmoittautuminen alkaa myöhemmin ilmoitettavana ajankohtana.</p>
+    <p>Pääjuhlan alustava ilmoittautuminen alkaa maaliskuussa 2017.</p>
   </div>
 
   <div class="row pic">
     <img class="logo center-block" src="vk-muuttapahtumat.jpg"/>
   </div>
 
-  <div class="row bg-light" id="tapahtumat">
+  <div class="row bg-light text-row" id="tapahtumat">
     <h2>Juhlavuoden tapahtumat</h2>
-    <p>Tässä julkaisemme tietoja juhlavuoden aikana järjestettävistä tapahtumista, ekskursioista ja liikuntamahdollisuuksista.</p>
+    <p>Tässä julkaisemme tietoja juhlavuoden aikana järjestettävistä tapahtumista, ekskursioista ja liikuntamahdollisuuksista. Vuorimieskillan tulevia tapahtumia voit seurata myös killan virallisesta <a href="http://vk.ayy.fi/?page=kalenteri">tapahtumakalenterista</a></p>
     <h3>21.1. Juhlavuoden alkupamaus</h3>
     <p>Juhlavuosi polkaistaan käyntiin juhlavuoden alkupamauksella 21.1.2017 Otakaari 20 yläkerrassa klo 18 alkaen. Luvassa on sitsit ja infoa tulevasta vuodesta. Tätä et halua jättää väliin! Ilmoittautuminen aukeaa tiistaina 10.1. klo 12 VK:n ilmomasiinassa osoitteessa vk.ayy.fi/ilmomasiina. Sitsit kustantavat 18 €.</p>
   </div>
@@ -102,14 +118,20 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     <img class="logo center-block" src="VKjuoksu.jpg"/>
   </div>
 
-  <div class="row bg-lighter">
+  <div class="row bg-lighter text-row" id="vujukuntoon">
     <h2>Vujukuntoon 2017</h2>
     <p>Eikö vujumekko taaskaan mahtunut päälle? Kiristääkö frakki? Eikö ole uudenvuodenlupausta?</p>
     <p>Ei hätää, Vuorimieskillan 70. Vuosijuhlissa nämä ongelmat on unohdettu. Juhlavuotena kiltalaiset nimittäin hiotaan huippukuntoon Vujukuntoon 2017 -ohjelmalla, jossa järjestetään kuukausittaisia lajikokeiluja uusien urheilumuotojen pariin, sekä pyritään viikottain järjestämään yhteistreenejä esimerkiksi lenkkien tai Unisportin ryhmäliikunnan muodossa. Kuukausittainen inspis-sähköposti pitää kiltalaiset ruodussa, ja muistuttaa tulevista urheilutapahtumista.</p>
-    <p>Jos haluat pysyä ajan tasalla, liity Vujukuntoon 2017 -Facebook-ryhmään täältä: https://www.facebook.com/groups/162457134228262/</p>
+    <p>Jos haluat pysyä ajan tasalla, liity <a href="https://www.facebook.com/groups/162457134228262/">Vujukuntoon 2017 -Facebook-ryhmään</a></p>
+    <h3>24.1 Kuntotesti</h3>
+    <p>Osana Vujukuntoon2017 projektia on mahdollisuus selvittää kuntotasosi kehitys marraskuuhun asti. Lähtötasokuntotesti järjestetään Otahallilla (Aava-salissa) tiistaina 24.1 klo 17-18. Mukaan tarvitset urheiluvaatteet, sisäkengät ja juomapullon (lukon tarvitset lokeroon). Jos Otahalli on sinulle tuntematonta aluetta, haemme klo 16:55 eksyneet lampaat pukuhuoneiden edestä. Olethan siis ajoissa vaihtamassa vaatteita. Ilmoittautuminen kuntotestiin löytyy <a href="vk.ayy.fi/ilmomasiina">ilmomasiinasta</a></p>
   </div>
 
-  <div class="row bg-light" id="yhteistyo">
+  <div class="row pic">
+    <img class="logo center-block" src="vk-yhteistyö.png"/>
+  </div>
+
+  <div class="row bg-light text-row" id="yhteistyo">
     <h2>Yhteistyökumppaniksi</h2>
     <p>Lähtemällä mukaan juhlavuotemme tukemiseen yrityksenne saa näkyvyyttä alamme nykyisten ja tulevien osaajien keskuudessa. Jos olet kiinnostunut lähtemään mukaan Vuorimieskillan juhlavuoteen, lisätietoja saat ottamalla yhteyttä vuosijuhlatoimikunnan yrityssuhdevastaaviin.</p>
     <p>Villiina Ikäheimo<br/>
