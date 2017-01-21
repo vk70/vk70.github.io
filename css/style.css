@@ -1,13 +1,14 @@
 @media all and (max-width: 360px) {
-   body {
+  body {
     font-size: 125%;
   }
 }
 @media all and (min-width: 360px) {
-   body {
+  body {
     font-size: 150%;
   }
 }
+
 
 
 @font-face {
@@ -152,10 +153,45 @@ p, h2, h3 {
     padding-right: 15px;
 }
 
+div.col-md-6 {
+  padding: 0 20px 0 0;
+}
+
+.text-fix {
+  padding: 0 0 0 0 !important;
+}
+
+div.hr {
+  height: 15px;
+  background-color: #2a608a;
+}
+
+div.hr hr {
+  display: none;
+}
+
+footer.container.footer {
+  width: 100%;
+  background-color: #0c1533;
+  color: #ffffff;
+  opacity: .90;
+}
+footer > div {
+  padding-top: 8px;
+}
+footer > div > p {
+  font-size: 0.8em;
+}
+
 @media (min-width: 768px) {
+
   p {
     text-align: justify;
-    text-justify: inter-word;
     justify-content: space-around;
   }
+
+  div.col-md-6 > p {
+    text-align: left;
+  }
+
 }
