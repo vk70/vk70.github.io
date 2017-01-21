@@ -181,6 +181,7 @@ footer > div {
 }
 footer > div > p {
   font-size: 0.8em;
+  padding: 0 0;
 }
 
 @media (min-width: 768px) {
