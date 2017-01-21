@@ -25,7 +25,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  background-color: #071854;
+  background-color: #0c1533;
 }
 
 h1, h2 {
@@ -38,18 +38,17 @@ h1 {
 
 h2 {
   font-size: 2.4em;
-  color: #071854;
+  color: #0c1533;
 }
 
 h3 {
   font-size: 1.2em;
-  color: #071854;
+  color: #0c1533;
 }
 
 p {
   font-family: 'Lato', sans-serif;
   font-size: 1.2em;
-
 }
 
 .center {
@@ -80,8 +79,8 @@ p, h2, h3 {
 }
 
 .navbar-custom {
-  background-color: #071854;
-  border-color: #071854;
+  background-color: #2a608a;
+  border-color: #2a608a;
   border: 0;
 }
 
@@ -90,25 +89,27 @@ p, h2, h3 {
 }
 
 .bg-light {
-  background-color: #e2e2e2;
+  background: #ffffff;
+  opacity: .90;
+  /*background-color: #e2e2e2;*/
 }
 
 .bg-lighter {
-  background-color: #f4f4f4;
+  background: #ffffff;
+  opacity: .90;
 }
 
 .navbar-custom .navbar-nav>li>a {
   color: white;
 }
 
-
-.navbar { min-height:20px; margin-bottom: 0px; }
+.navbar { min-height:37px; margin-bottom: 0px; }
 .navbar .navbar-brand{ padding: 0 12px;font-size: 16px;line-height: 20px;height: 20px; }
 .navbar .navbar-nav > li > a {  padding-top: 5px; padding-bottom: 0px; line-height: 27px; }
 .navbar .navbar-toggle {  margin-top: 3px; margin-bottom: 0px; padding: 8px 9px; }
 .navbar .navbar-form { margin-top: 2px; margin-bottom: 0px }
-.navbar .navbar-collapse {border-color: #071854;}
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover { background-color: #071854 }
+.navbar .navbar-collapse {border-color: #2a608a;}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover { background-color: #2a608a }
 .navbar-toggle { border: 0 }
 .navbar-default .navbar-toggle .icon-bar { background-color: white; }
 .navbar-custom .navbar-nav>li>a { color: white; text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; }
@@ -138,4 +139,23 @@ p, h2, h3 {
     float: none;
     display: block;
     margin: 0 auto;
+}
+
+.sponsors {
+  padding: 0 20px;
+}
+
+.text-box {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+    justify-content: space-around;
+  }
 }
