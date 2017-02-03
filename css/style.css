@@ -29,7 +29,7 @@ body {
   background-color: #0c1533;
 }
 
-h1, h2 {
+h1, h2, .sponsor-headline {
   font-family: "SignPainter";
 }
 
@@ -45,6 +45,11 @@ h2 {
 h3 {
   font-size: 1.2em;
   color: #0c1533;
+}
+
+h4 {
+  color: #0c1533;
+  margin-top: 20px;
 }
 
 p {
@@ -66,6 +71,12 @@ p {
 .logo {
   max-width: 100%;
   height: auto;
+}
+
+.icon {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 2.5em;
 }
 
 body { padding-top: 37px; }
@@ -106,7 +117,7 @@ p, h2, h3 {
 
 .navbar { min-height:37px; margin-bottom: 0px; }
 .navbar .navbar-brand{ padding: 0 12px;font-size: 16px;line-height: 20px;height: 20px; }
-.navbar .navbar-nav > li > a {  padding-top: 5px; padding-bottom: 0px; line-height: 27px; }
+.navbar .navbar-nav > li > a { padding: 5px 10px 0 10px; line-height: 27px; }
 .navbar .navbar-toggle {  margin-top: 3px; margin-bottom: 0px; padding: 8px 9px; }
 .navbar .navbar-form { margin-top: 2px; margin-bottom: 0px }
 .navbar .navbar-collapse {border-color: #2a608a;}
@@ -114,7 +125,7 @@ p, h2, h3 {
 .navbar-toggle { border: 0 }
 .navbar-default .navbar-toggle .icon-bar { background-color: white; }
 .navbar-custom .navbar-nav>li>a { color: white; text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; }
-
+.navbar .container { padding: 0; margin: 0; width: 100%; }
 
 .navbar-collapse {
   text-align:center;
@@ -126,7 +137,6 @@ p, h2, h3 {
 
 .sponsor {
   height: 70px;
-
 }
 
 .sponsor-img {
@@ -134,6 +144,14 @@ p, h2, h3 {
   max-width:100%;
   margin: 0 20px;
   padding-bottom: 20px;
+}
+
+.main-sponsor {
+  margin-bottom: 10px;
+}
+
+.sponsor-headline {
+  font-size: 2em;
 }
 
 .col-center-block {
