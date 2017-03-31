@@ -25278,7 +25278,7 @@ function makeTable(opts, filteredList) {
   var currentEnd = currentPage * opts.pagination
   var currentRows = data.slice(currentStart, currentEnd)
   table(currentRows, opts)
-  if (opts.data.length > opts.pagination) writePreNext(opts.tableDiv, currentPage, currentPage, totalPages, data, opts.pagination)
+  // if (opts.data.length > opts.pagination) writePreNext(opts.tableDiv, currentPage, currentPage, totalPages, data, opts.pagination)
 
 }
 
@@ -25367,10 +25367,10 @@ function table(data, opts) {
   var templateID = ""
   if (opts.templateID) {
     templateID = opts.templateID.replace("#", "")
-  } 
+  }
   else {
     templateID = opts.tableDiv.replace("#", "") + "_template"
-  } 
+  }
   var template = $(templateID)
   var tableContents = ich[templateID]({rows: data})
   $(opts.tableDiv).html(tableContents)
