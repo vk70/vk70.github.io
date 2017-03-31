@@ -62,6 +62,10 @@ table {
   table-layout: fixed;
 }
 
+th.tHeader {
+  padding: 3px 20px 3px 0px;
+}
+
 .center {
   text-align:center;
 }

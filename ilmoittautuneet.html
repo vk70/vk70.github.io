@@ -92,7 +92,7 @@ $(document).on('click','.navbar-collapse.in',function(e) {
   <table>
     <tr><th class="tHeader" style='text-align:right;vertical-align:middle'>Nimi</th><th class="tHeader" style='text-align:left;vertical-align:middle'>Pöytätoive</th></tr>
       {{#rows}}
-        <tr><td style='text-align:right;vertical-align:middle'>{{nimi}}</td><td style='text-align:left;vertical-align:middle'>{{pöytätoive}}</td></tr>
+        <tr><td style='text-align:right;vertical-align:middle'>{{etunimi}} {{sukunimi}}</td><td style='text-align:left;vertical-align:middle'>{{pöytätoive}}</td></tr>
       {{/rows}}
   </table>
 </script>
@@ -104,7 +104,7 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 
 
   function showInfo(data) {
-    var tableOptions = {"data": data, "pagination": 10, "tableDiv": "#fullTable", "filterDiv": "#fullTableFilter"}
+    var tableOptions = {"data": data, "pagination": 200, "tableDiv": "#fullTable", "filterDiv": "#fullTableFilter"}
     Sheetsee.makeTable(tableOptions)
 
   }
