@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/sss.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/sheetsee.js"></script>
+<script src="scripts/tabletop1.3.4.js"></script>
+<script>
+var shiftWindow = function() { scrollBy(0, -37) };
+if (location.hash) shiftWindow();
+window.addEventListener("hashchange", shiftWindow);
+</script>
+<script>
+$(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    }
+});
+</script>
+</head>
+<body>
+ <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header page-scroll ">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <!--<a class="navbar-brand page-scroll" id="logo" href="#page-top">Prodeko50</a>-->
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li class="hidden active">
+                      <a href="#page-top"></a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" id="link-vuorimieskilta70" href="#vuorimieskilta70">Vuorimieskilta 70</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" id="link-paajuhla" href="#paajuhla">Pääjuhla</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" id="link-juhlavuoden-tapahtumat" href="#tapahtumat">Tapahtumat</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" id="link-vujukuntoon" href="#vujukuntoon">Vujukuntoon</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" id="link-yhteistyo" href="#yhteistyo">Yhteistyökumppaniksi</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" id="link-yhteistyo" href="#vuosijuhlatoimikunta">Vuosijuhlatoimikunta</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+  </nav>
+<div class="container">
+  <div class="row">
+    <img class="logo center-block" src="vk-logo.png"/>
+   </div>
+</div>
+
+<div class="container signup bg-light">
+  <h1 align="center">Ilmoittautuneet</h1>
+<div id="fullTable">
+  <table>
+    <tr><th class="tHeader">Nimi</th><th class="tHeader">Pöytätoive</th></tr>
+  </table>
+</div>
+</div>
+<footer class="container footer">
+  <div class="row">
+    <p class="text-center">Ulkoasu © 2016-2017 Juho Toivonen, sisältö © Vuorimieskilta ry</p>
+  </div>
+</footer>
+<script id="fullTable_template" type="text/html">
+  <table>
+    <tr><th class="tHeader" style='text-align:right;vertical-align:middle'>Nimi</th><th class="tHeader" style='text-align:left;vertical-align:middle'>Pöytätoive</th></tr>
+      {{#rows}}
+        <tr><td style='text-align:right;vertical-align:middle'>{{nimi}}</td><td style='text-align:left;vertical-align:middle'>{{pöytätoive}}</td></tr>
+      {{/rows}}
+  </table>
+</script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var URL = "1WzI_WhmHiYrDZUZstgQyeoWwB038i0N-86XOG1-X3tY"
+    Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
+  })
+
+
+  function showInfo(data) {
+    var tableOptions = {"data": data, "pagination": 10, "tableDiv": "#fullTable", "filterDiv": "#fullTableFilter"}
+    Sheetsee.makeTable(tableOptions)
+
+  }
+</script>
+</body>
+</html>
