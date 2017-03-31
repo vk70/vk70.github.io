@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/sss.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <script src="scripts/jquery-3.1.1.min.js"></script>
@@ -46,25 +47,22 @@ $(document).on('click','.navbar-collapse.in',function(e) {
                       <a href="#page-top"></a>
                   </li>
                   <li>
-                      <a class="page-scroll" id="link-vuorimieskilta70" href="/">Vuorimieskilta 70</a>
+                      <a class="page-scroll" id="link-vuorimieskilta70" href="#vuorimieskilta70">Vuorimieskilta 70</a>
                   </li>
                   <li>
-                      <a class="page-scroll" id="link-paajuhla" href="/#paajuhla">Pääjuhla</a>
+                      <a class="page-scroll" id="link-paajuhla" href="#paajuhla">Pääjuhla</a>
                   </li>
                   <li>
-                      <a class="page-scroll" id="link-ilmoittautuminen" href="/ilmoittautuminen">Ilmoittautuminen</a>
+                      <a class="page-scroll" id="link-juhlavuoden-tapahtumat" href="#tapahtumat">Tapahtumat</a>
                   </li>
                   <li>
-                      <a class="page-scroll" id="link-juhlavuoden-tapahtumat" href="/#tapahtumat">Tapahtumat</a>
+                      <a class="page-scroll" id="link-vujukuntoon" href="#vujukuntoon">Vujukuntoon</a>
                   </li>
                   <li>
-                      <a class="page-scroll" id="link-vujukuntoon" href="/#vujukuntoon">Vujukuntoon</a>
+                      <a class="page-scroll" id="link-yhteistyo" href="#yhteistyo">Yhteistyökumppaniksi</a>
                   </li>
                   <li>
-                      <a class="page-scroll" id="link-yhteistyo" href="/#yhteistyo">Yhteistyökumppaniksi</a>
-                  </li>
-                  <li>
-                      <a class="page-scroll" id="link-yhteistyo" href="/#vuosijuhlatoimikunta">Vuosijuhlatoimikunta</a>
+                      <a class="page-scroll" id="link-yhteistyo" href="#vuosijuhlatoimikunta">Vuosijuhlatoimikunta</a>
                   </li>
               </ul>
           </div>
@@ -72,13 +70,12 @@ $(document).on('click','.navbar-collapse.in',function(e) {
       </div>
       <!-- /.container-fluid -->
   </nav>
-<div class="container">
-  <div class="row">
-    <img class="logo center-block" src="vk-logo.png"/>
-   </div>
-</div>
-
-<div class="container bg-light">
+  <div class="container">
+    <div class="row">
+      <img class="logo center-block" src="vk-logo.png"/>
+    </div>
+  </div>
+  <div class="container bg-light">
   <h1 align="center">Vuorimieskillan 70. Vuosijuhla 24.11.2017</h1>
   <p class="ilmo">Vuorimieskillan 70. Vuosijuhla pärähtää käyntiin 24.11.2017 pääjuhlalla kello 19.00 ravintola Wanhassa Satamassa (Pikku Satamakatu 3-5, 00161 Helsinki), josta on puolilta öin bussikuljetus jatkopaikkaan. Perinteinen Silliaamiainen juhlitaan paikassa X Vuosijuhlaa seuraavana päivänä 25.11.2017. Tarkemmat ohjeet ja aikataulut ilmoitetaan hyvissä ajoin ennen juhlia.</p>
   <p class="ilmo">Sinulla on nyt mahdollisuus ilmoittautua killan historian ikimuistoisimpiin juhliin! Nopeimmat 200 henkilöä mahtuvat mukaan ennakkoilmoittautumisessa, joka on auki 31.3.-17.4.2017. Ennakkoilmoittautuminen on tarkoitettu Vuorimiehille ja heidän aveceilleen. Opiskelijoiden tulee olla Vuorimieskillan jäseniä, mutta jäsenyyden voi maksaa ilmoittautumisen jälkeen, kuitenkin 15.5. mennessä. Opiskelijan avecin ei tarvitse olla killan jäsen. Muiden kiltojen ja yhdistysten edustajat ilmoittautuvat juhlaan myöhemmin syksyllä.</p>
@@ -108,17 +105,84 @@ Ronja Ruismäki & Sanna-Mari Nevala<br>
 vuorimies70@gmail.com<br>
 ronja.ruismaki@aalto.fi 0504107254<br>
 nevalas2@gmail.com 0442950927</p>
+<hr>
 </div>
 
-<div class="container bg-light" >
-  <h2 align="center">Ilmoittautuminen</h1>
-  <p style="text-align: center">Ilmoittautuminen aukeaa 31.3. tässä klo 10:00</p>
+<div class="container bg-light" align="center">
+  <h1 align="center">Ilmoittautuminen</h1>
+  <form id="gform" method="POST" class="pure-form"
+  action="https://script.google.com/macros/s/AKfycbwbQlQUogDa_o4yU9bSN2pxV_cEE8CZUIJP8HNPZe1FHEehkwA/exec">
+    <!-- change the form action to your script url -->
+
+    <fieldset class="pure-group pure-form-stacked">
+      <label for="firstname">Etunimi*</label>
+      <input id="firstname" name="Etunimi" / required>
+    </fieldset>
+
+
+    <fieldset class="pure-group pure-form-stacked">
+      <label for="lastname">Sukunimi*</label>
+      <input id="lastname" name="Sukunimi" / required>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="email">Sähköposti*</label>
+      <input id="email" name="Sähköpostiosoite" type="email" value=""
+      required/>
+      <span id="email-invalid" style="visibility:hidden">
+        Must be a valid email address</span>
+    </fieldset>
+
+    <fieldset>
+      <label>Opiskelija / Valmistunut / Kannatusjäsen*</label><br/>
+      <input id="opiskelija" type="radio" name="Tyyppi" value="Opiskelija" checked required> Opiskelija</br>
+      <input id="valmistunut" type="radio" name="Tyyppi" value="Valmistunut" required> Valmistunut</br>
+      <input id="kannatusjäsen" type="radio" name="Tyyppi" value="Kannatusjäsen" required> Kannatusjäsen
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="fuksivuosi">Fuksivuosi</label>
+      <input id="fuksivuosi" name="Fuksivuosi"/>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="avec">Avecin nimi (ilmoittautuu erikseen)</label>
+      <input id="avec" name="Avec"/>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="pöytätoive">Pöytätoive</label>
+      <input id="pöytätoive" name="Pöytätoive"/>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="erikoisruokavalio">Allergiat / erikoisruokavalio</label>
+      <input id="erikoisruokavalio" name="Erikoisruokavalio"/>
+    </fieldset>
+
+    <fieldset>
+      <label>Osallistutko silliaamiaiselle (20 €)?*</label><br/>
+      <input id="option-yes" type="radio" name="Silliaamiainen" value="Kyllä" checked required> Kyllä</br>
+      <input id="option-no" type="radio" name="Silliaamiainen" value="Ei" required> Ei
+    </fieldset>
+
+    <fieldset>
+      <label>Oletko kiinnostunut killan 70-vuotis historiikkiteoksen ostamisesta (18€)?*</label><br/>
+      <input id="option-yes" type="radio" name="Historiikki" value="Kyllä" checked required> Kyllä</br>
+      <input id="option-no" type="radio" name="Historiikki" value="Ei" required> Ei
+    </fieldset>
+
+    <button class="button-success pure-button button-xlarge">&nbsp;Ilmoittaudu</button>
+
+  </form>
+
+  <script data-cfasync="false" type="text/javascript"
+  src="scripts/form-submission-handler.js"></script>
 </div>
 <footer class="container footer">
   <div class="row">
     <p class="text-center">Ulkoasu © 2016-2017 Juho Toivonen, sisältö © Vuorimieskilta ry</p>
   </div>
 </footer>
-
 </body>
 </html>
