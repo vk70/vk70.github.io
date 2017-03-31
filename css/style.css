@@ -192,9 +192,14 @@ div.col-md-6 {
 .ilmo {
   font-size: 1em;
 }
+
 div.hr {
   height: 15px;
   background-color: #2a608a;
+}
+
+form {
+  padding-bottom: 30px;
 }
 
 div.hr hr {
@@ -226,4 +231,10 @@ footer > div > p {
     text-align: left;
   }
 
+}
+
+@media only screen and (max-width: 480px) {
+  .pure-form label {
+    display: inline-block;
+  }
 }
