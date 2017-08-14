@@ -26,20 +26,14 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 <script>
 
 function submitClick() {
+    document.getElementById("btnsignup").disabled = true;
     var xhr = new XMLHttpRequest();
     var url = "https://vk70.herokuapp.com/form";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr.responseText);
-            var json = JSON.parse(xhr.responseText);
-            console.log(json)
-            var attendee = json.data;
-            for (i in attendee) {
-                console.log(attendee[i]);
-            }
-
+            document.getElementById("signupform").innerHTML = '<h1 align="center">Ilmoittautuminen</h1><p class="center" style="padding-bottom:75px">Kiitos ilmoittautumisesta! Ilmoittautuneet löydät <a href="/ilmoittautuneet">täältä</a></p>'
         }
     };
 
@@ -181,7 +175,7 @@ function submitClick() {
   <hr>
   </div>
 
-<div class="container bg-light" align="center">
+<div id="signupform" class="container bg-light" align="center">
   <h1 align="center">Ilmoittautuminen</h1>
   <form id="gform" method="POST" class="pure-form"
   onsubmit="event.preventDefault(); submitClick();">
@@ -257,7 +251,7 @@ function submitClick() {
       <input id="option-no" type="radio" name="greeting" value="Ei" required> Ei
     </fieldset>
 
-    <button class="button-success pure-button button-xlarge">&nbsp;Ilmoittaudu</button>
+    <button id="btnsignup" class="button-success pure-button button-xlarge">&nbsp;Ilmoittaudu</button>
 
   </form>
 
