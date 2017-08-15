@@ -81,7 +81,7 @@ $(document).on('click','.navbar-collapse.in',function(e) {
   <h1 align="center">Ilmoittautuneet</h1>
 <div id="fullTable">
   <table>
-    <tr><th class="tHeader" style='text-align:right;vertical-align:middle'>Nimi</th><th class="tHeader" style='text-align:left;vertical-align:middle'>Pöytätoive</th></tr>
+    <tr><th class="tHeader" style='text-align:right;vertical-align:middle'>Nimi</th><th class="tHeader" style='text-align:center;vertical-align:middle'>Pöytätoive</th><th class="tHeader" style='text-align:left;vertical-align:middle'>Edustustaho</th></tr>
   </table>
 </div>
 </div>
@@ -99,7 +99,8 @@ $(document).on('click','.navbar-collapse.in',function(e) {
         for (var i = 0; i < data.length; i++) {
             tr = $('<tr/>');
             tr.append("<td style='text-align:right;vertical-align:middle'>" + data[i].name + "</td>");
-            tr.append("<td style='text-align:left;vertical-align:middle'>" + data[i].email + "</td>");
+            tr.append("<td style='text-align:center;vertical-align:middle'>" + data[i].tablewish + "</td>");
+            tr.append("<td style='text-align:left;vertical-align:middle'>" + data[i].representative + "</td>");
             $('table').append(tr);
         }
     });
