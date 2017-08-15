@@ -73,6 +73,7 @@ $(document).on('click','.navbar-collapse.in',function(e) {
       </div>
       <!-- /.container-fluid -->
   </nav>
+
 <div class="container">
   <div class="row">
     <img class="logo center-block" src="vk-logo.png"/>
@@ -80,7 +81,15 @@ $(document).on('click','.navbar-collapse.in',function(e) {
 </div>
 
 <div class="container signup bg-light">
-  <h1 align="center">Ilmoittautuneet</h1>
+<h1 align="center">Ilmoittautuneet</h1>
+  <h2 align="center">Kutsuvieras</h2>
+<div id="retable">
+  <table id="representativetable">
+    <tr><th class="tHeader" style='text-align:right;vertical-align:middle'>Nimi</th><th class="tHeader" style='text-align:center;vertical-align:middle'>Pöytätoive</th><th class="tHeader" style='text-align:left;vertical-align:middle'>Edustustaho</th></tr>
+  </table>
+</div>
+<div style="padding:30px"></div>
+<h2 align="center">Ennakko</h2>
 <div id="fullTable">
   <table>
     <tr><th class="tHeader">Nimi</th><th class="tHeader">Pöytätoive</th></tr>
@@ -112,6 +121,22 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     Sheetsee.makeTable(tableOptions)
 
   }
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $.getJSON("https://vk70.herokuapp.com/json",
+    function (json) {
+        var tr;
+        var data = json.data
+        for (var i = 0; i < data.length; i++) {
+            tr = $('<tr/>');
+            tr.append("<td style='text-align:right;vertical-align:middle'>" + data[i].name + "</td>");
+            tr.append("<td style='text-align:center;vertical-align:middle'>" + data[i].tablewish + "</td>");
+            tr.append("<td style='text-align:left;vertical-align:middle'>" + data[i].representative + "</td>");
+            $('#representativetable').append(tr);
+        }
+    });
+  });
 </script>
 </body>
 </html>
