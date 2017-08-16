@@ -78,8 +78,18 @@ function submitClick() {
         break;
       }
     }
+
+    var aradios = document.getElementsByName('alcohol');
+    var alcohol;
+    for (var i = 0, length = aradios.length; i < length; i++) {
+      if (aradios[i].checked) {
+        alcohol = aradios[i].value;
+        break;
+      }
+    }
+
     console.log(greeting);
-    var data = JSON.stringify({"firstname": document.getElementById("firstname").value, "lastname": document.getElementById("lastname").value, "email": document.getElementById("email").value, "type": type, "freshman": document.getElementById("freshman").value, "avec": document.getElementById("avec").value, "tablewish": document.getElementById("tablewish").value, "specialdiet": document.getElementById("specialdiet").value, "brunch": brunch, "history": history, "representative": document.getElementById("representative").value, "greeting": greeting});
+    var data = JSON.stringify({"firstname": document.getElementById("firstname").value, "lastname": document.getElementById("lastname").value, "email": document.getElementById("email").value, "type": type, "freshman": document.getElementById("freshman").value, "avec": document.getElementById("avec").value, "tablewish": document.getElementById("tablewish").value, "specialdiet": document.getElementById("specialdiet").value, "brunch": brunch, "history": history, "representative": document.getElementById("representative").value, "greeting": greeting, "alcohol": alcohol});
     xhr.send(data);
 
 };
@@ -159,7 +169,8 @@ function submitClick() {
                 Fuksivuosi<br>
                 Avecin nimi (ilmoittautuu erikseen)<br>
                 Pöytätoive<br>
-                Allergiat/Erikoisruokavalio<br>
+                Erikoisruokavalio<br>
+                Juomatarjoilu<br>
                 Osallistun silliaamiaiselle (20 €) Kyllä / Ei *<br>
                 Olen kiinnostunut killan 70-vuotis historiikkiteoksen ostamisesta (18€) Kyllä / Ei*<br>
                 Edustustaho<br>
@@ -230,19 +241,25 @@ function submitClick() {
     </fieldset>
 
     <fieldset class="pure-group">
-      <label for="specialdiet">Allergiat / erikoisruokavalio</label>
+      <label for="specialdiet">Erikoisruokavalio</label>
       <input id="specialdiet" name="specialdiet"/>
     </fieldset>
 
     <fieldset>
+      <label>Juomatarjoilu?*</label><br/>
+      <input id="option-yes" type="radio" name="alcohol" value="Alkohollinen" required> Alkohollinen</br>
+      <input id="option-no" type="radio" name="alcohol" value="Alkoholiton" required> Alkoholiton
+    </fieldset>
+
+    <fieldset>
       <label>Osallistutko silliaamiaiselle (20 €)?*</label><br/>
-      <input id="option-yes" type="radio" name="brunch" value="Kyllä" checked required> Kyllä</br>
+      <input id="option-yes" type="radio" name="brunch" value="Kyllä" required> Kyllä</br>
       <input id="option-no" type="radio" name="brunch" value="Ei" required> Ei
     </fieldset>
 
     <fieldset>
       <label>Oletko kiinnostunut killan 70-vuotis historiikkiteoksen ostamisesta (18€)?*</label><br/>
-      <input id="option-yes" type="radio" name="history" value="Kyllä" checked required> Kyllä</br>
+      <input id="option-yes" type="radio" name="history" value="Kyllä" required> Kyllä</br>
       <input id="option-no" type="radio" name="history" value="Ei" required> Ei
     </fieldset>
 
@@ -253,7 +270,7 @@ function submitClick() {
 
     <fieldset>
       <label>Haluatko tervehtiä raatia cocktail tilaisuudessa?</label><br/>
-      <input id="option-yes" type="radio" name="greeting" value="Kyllä" checked required> Kyllä</br>
+      <input id="option-yes" type="radio" name="greeting" value="Kyllä" required> Kyllä</br>
       <input id="option-no" type="radio" name="greeting" value="Ei" required> Ei
     </fieldset>
 
