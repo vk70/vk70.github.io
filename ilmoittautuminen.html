@@ -25,6 +25,66 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     }
 });
 </script>
+<script>
+
+function submitClick() {
+    document.getElementById("btnsignup").disabled = true;
+    var xhr = new XMLHttpRequest();
+    var url = "https://vk70.herokuapp.com/form";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("signupform").innerHTML = '<h1 align="center">Ilmoittautuminen</h1><p class="center" style="padding-bottom:75px;font-size:1.5em">Kiitos ilmoittautumisesta! Ilmoittautuneet löydät <a href="/ilmoittautuneet">täältä</a></p>'
+        }
+    };
+
+    var tradios = document.getElementsByName('type');
+    var type;
+    for (var i = 0, length = tradios.length; i < length; i++) {
+      if (tradios[i].checked) {
+        // do whatever you want with the checked radio
+        type = tradios[i].value;
+
+        // only one radio can be logically checked, don't check the rest
+        break;
+      }
+    }
+    var bradios = document.getElementsByName('brunch');
+    var brunch;
+    for (var i = 0, length = bradios.length; i < length; i++) {
+      if (bradios[i].checked) {
+        // do whatever you want with the checked radio
+        brunch = bradios[i].value;
+
+        // only one radio can be logically checked, don't check the rest
+        break;
+      }
+    }
+    var hradios = document.getElementsByName('history');
+    var history;
+    for (var i = 0, length = hradios.length; i < length; i++) {
+      if (hradios[i].checked) {
+        history = hradios[i].value;
+        break;
+      }
+    }
+
+
+    var aradios = document.getElementsByName('alcohol');
+    var alcohol;
+    for (var i = 0, length = aradios.length; i < length; i++) {
+      if (aradios[i].checked) {
+        alcohol = aradios[i].value;
+        break;
+      }
+    }
+
+    var data = JSON.stringify({"firstname": document.getElementById("firstname").value, "lastname": document.getElementById("lastname").value, "email": document.getElementById("email").value, "type": type, "freshman": document.getElementById("freshman").value, "avec": document.getElementById("avec").value, "tablewish": document.getElementById("tablewish").value, "specialdiet": document.getElementById("specialdiet").value, "brunch": brunch, "history": history, "alcohol": alcohol});
+    xhr.send(data);
+
+};
+</script>
 </head>
 <body>
  <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -126,10 +186,82 @@ $(document).on('click','.navbar-collapse.in',function(e) {
   <h3>Ilmoittautuneet</h3>
   <p>Ilmoittautuneet näet <a href="http://vk70.fi/ilmoittautuneet">täältä</a>
 
-  <div class="bg-light" align="center">
-    <h1 align="center">Ilmoittautuminen</h1>
-    <p style="text-align: center; margin-bottom: 70px">Varsinainen ilmoittautuminen aukeaa 1.10.</p>
-  </div>
+  <div id="signupform" class="container bg-light" align="center">
+  <h1 align="center">Ilmoittautuminen</h1>
+  <form id="gform" method="POST" class="pure-form"
+  onsubmit="event.preventDefault(); submitClick();">
+    <!-- change the form action to your script url -->
+
+    <fieldset class="pure-group pure-form-stacked">
+      <label for="firstname">Etunimi*</label>
+      <input id="firstname" name="firstname" / required>
+    </fieldset>
+
+
+    <fieldset class="pure-group pure-form-stacked">
+      <label for="lastname">Sukunimi*</label>
+      <input id="lastname" name="lastname" / required>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="email">Sähköposti*</label>
+      <input id="email" name="email" type="email" value=""
+      required/>
+      <span id="email-invalid" style="visibility:hidden">
+        Must be a valid email address</span>
+    </fieldset>
+
+    <fieldset>
+      <label>Opiskelija / Valmistunut / Kannatusjäsen*</label><br/>
+      <input id="opiskelija" type="radio" name="type" value="Opiskelija" checked required> Opiskelija</br>
+      <input id="valmistunut" type="radio" name="type" value="Valmistunut tai muu" required> Valmistunut tai muu</br>
+      <input id="valmistunut" type="radio" name="type" value="Tarjottu illalliskortti" required> Tarjottu illalliskortti</br>
+      <input id="kannatusjäsen" type="radio" name="type" value="Kannatusjäsen" required> Kannatusjäsen
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="freshman">Fuksivuosi</label>
+      <input id="freshman" name="freshman"/>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="avec">Avecin nimi (ilmoittautuu erikseen)</label>
+      <input id="avec" name="avec"/>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="tablewish">Pöytätoive</label>
+      <input id="tablewish" name="tablewish"/>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="specialdiet">Erikoisruokavalio</label>
+      <input id="specialdiet" name="specialdiet"/>
+    </fieldset>
+
+    <fieldset>
+      <label>Juomatarjoilu?*</label><br/>
+      <input id="option-yes" type="radio" name="alcohol" value="Alkohollinen" required> Alkoholillinen</br>
+      <input id="option-no" type="radio" name="alcohol" value="Alkoholiton" required> Alkoholiton
+    </fieldset>
+
+    <fieldset>
+      <label>Osallistutko silliaamiaiselle (20 €)?*</label><br/>
+      <input id="option-yes" type="radio" name="brunch" value="Kyllä" required> Kyllä</br>
+      <input id="option-no" type="radio" name="brunch" value="Ei" required> Ei
+    </fieldset>
+
+    <fieldset>
+      <label>Oletko kiinnostunut killan 70-vuotis historiikkiteoksen ostamisesta (18€)?*</label><br/>
+      <input id="option-yes" type="radio" name="history" value="Kyllä" required> Kyllä</br>
+      <input id="option-no" type="radio" name="history" value="Ei" required> Ei
+    </fieldset>
+
+    <button id="btnsignup" class="button-success pure-button button-xlarge">&nbsp;Ilmoittaudu</button>
+
+  </form>
+
+</div>
 
     <script data-cfasync="false" type="text/javascript"
     src="scripts/form-submission-handler.js"></script>
