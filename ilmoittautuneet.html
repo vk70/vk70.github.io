@@ -152,7 +152,7 @@ $(document).on('click','.navbar-collapse.in',function(e) {
         var data = json.data
         for (var i = 0; i < data.length; i++) {
             tr = $('<tr/>');
-            tr.append("<td style='text-align:right;vertical-align:middle'>" + data[i].name + "</td>");
+            tr.append("<td style='text-align:right;vertical-align:middle'>" + (i+1) + ".  " + data[i].name + "</td>");
             tr.append("<td style='text-align:left;vertical-align:middle'>" + data[i].tablewish + "</td>");
             $('#signup').append(tr);
             if (i == 144) $('#signup').append("<tr/><td style='text-align:right;vertical-align:middle'>----------</td><td style='text-align:left;vertical-align:middle'>----------</td>");
