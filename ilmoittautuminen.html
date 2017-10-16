@@ -186,86 +186,15 @@ function submitClick() {
   <h3>Ilmoittautuneet</h3>
   <p>Ilmoittautuneet näet <a href="http://vk70.fi/ilmoittautuneet">täältä</a>
 
-  <div id="signupform" class="container bg-light" align="center">
-  <h1 align="center">Ilmoittautuminen</h1>
-  <form id="gform" method="POST" class="pure-form"
-  onsubmit="event.preventDefault(); submitClick();">
-    <!-- change the form action to your script url -->
 
-    <fieldset class="pure-group pure-form-stacked">
-      <label for="firstname">Etunimi*</label>
-      <input id="firstname" name="firstname" / required>
-    </fieldset>
-
-
-    <fieldset class="pure-group pure-form-stacked">
-      <label for="lastname">Sukunimi*</label>
-      <input id="lastname" name="lastname" / required>
-    </fieldset>
-
-    <fieldset class="pure-group">
-      <label for="email">Sähköposti*</label>
-      <input id="email" name="email" type="email" value=""
-      required/>
-      <span id="email-invalid" style="visibility:hidden">
-        Must be a valid email address</span>
-    </fieldset>
-
-    <fieldset>
-      <label>Opiskelija / Valmistunut / Kannatusjäsen*</label><br/>
-      <input id="opiskelija" type="radio" name="type" value="Opiskelija" checked required> Opiskelija</br>
-      <input id="valmistunut" type="radio" name="type" value="Valmistunut tai muu" required> Valmistunut tai muu</br>
-      <input id="valmistunut" type="radio" name="type" value="Tarjottu illalliskortti" required> Tarjottu illalliskortti</br>
-      <input id="kannatusjäsen" type="radio" name="type" value="Kannatusjäsen" required> Kannatusjäsen
-    </fieldset>
-
-    <fieldset class="pure-group">
-      <label for="freshman">Fuksivuosi</label>
-      <input id="freshman" name="freshman"/>
-    </fieldset>
-
-    <fieldset class="pure-group">
-      <label for="avec">Avecin nimi (ilmoittautuu erikseen)</label>
-      <input id="avec" name="avec"/>
-    </fieldset>
-
-    <fieldset class="pure-group">
-      <label for="tablewish">Pöytätoive</label>
-      <input id="tablewish" name="tablewish"/>
-    </fieldset>
-
-    <fieldset class="pure-group">
-      <label for="specialdiet">Erikoisruokavalio</label>
-      <input id="specialdiet" name="specialdiet"/>
-    </fieldset>
-
-    <fieldset>
-      <label>Juomatarjoilu?*</label><br/>
-      <input id="option-yes" type="radio" name="alcohol" value="Alkohollinen" required> Alkoholillinen</br>
-      <input id="option-no" type="radio" name="alcohol" value="Alkoholiton" required> Alkoholiton
-    </fieldset>
-
-    <fieldset>
-      <label>Osallistutko silliaamiaiselle (20 €)?*</label><br/>
-      <input id="option-yes" type="radio" name="brunch" value="Kyllä" required> Kyllä</br>
-      <input id="option-no" type="radio" name="brunch" value="Ei" required> Ei
-    </fieldset>
-
-    <fieldset>
-      <label>Oletko kiinnostunut killan 70-vuotis historiikkiteoksen ostamisesta (18€)?*</label><br/>
-      <input id="option-yes" type="radio" name="history" value="Kyllä" required> Kyllä</br>
-      <input id="option-no" type="radio" name="history" value="Ei" required> Ei
-    </fieldset>
-
-    <button id="btnsignup" class="button-success pure-button button-xlarge">&nbsp;Ilmoittaudu</button>
-
-  </form>
-
-</div>
 
     <script data-cfasync="false" type="text/javascript"
     src="scripts/form-submission-handler.js"></script>
   </div>
+  <div id="signupform" class="container bg-light" align="center">
+  <h1 align="center">Ilmoittautuminen</h1>
+  <p style="text-align: center; margin-bottom: 70px">Ilmoittautuminen on sulkeutunut.</p>
+</div>
   <footer class="container footer">
     <div class="row">
       <p class="text-center">Ulkoasu © 2016-2017 Juho Toivonen, sisältö © Vuorimieskilta ry</p>
