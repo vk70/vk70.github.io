@@ -111,13 +111,13 @@ $(document).on('click','.navbar-collapse.in',function(e) {
   <table>
     <tr><th class="tHeader" style='text-align:right;vertical-align:middle'>Nimi</th><th class="tHeader" style='text-align:left;vertical-align:middle'>Pöytätoive</th></tr>
       {{#rows}}
-        <tr><td style='text-align:right;vertical-align:middle'>{{nimi}} {{etunimi}} {{sukunimi}}</td><td style='text-align:left;vertical-align:middle'>{{pöytätoive}}</td></tr>
+        <tr><td style='text-align:right;vertical-align:middle'>{{numero}} {{nimi}} {{etunimi}} {{sukunimi}}</td><td style='text-align:left;vertical-align:middle'>{{pöytätoive}}</td></tr>
       {{/rows}}
   </table>
 </script>
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function() {
-    var URL = "1WzI_WhmHiYrDZUZstgQyeoWwB038i0N-86XOG1-X3tY"
+    var URL = "1DGhd4lxqBxD7fK34xfPqNomV029JRT_dLZ5YFMvmBjY"
     Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
   })
 
@@ -136,7 +136,7 @@ $(document).on('click','.navbar-collapse.in',function(e) {
         var data = json.data
         for (var i = 0; i < data.length; i++) {
             tr = $('<tr/>');
-            tr.append("<td style='text-align:right;vertical-align:middle'>" + data[i].name + "</td>");
+            tr.append("<td style='text-align:right;vertical-align:middle'>" + (i+1) + ".  " + data[i].name + "</td>");
             tr.append("<td style='text-align:center;vertical-align:middle'>" + data[i].tablewish + "</td>");
             tr.append("<td style='text-align:left;vertical-align:middle'>" + data[i].representative + "</td>");
             $('#representativetable').append(tr);
